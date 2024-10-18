@@ -1,0 +1,102 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "globals": {
+    "React": true,
+    "document": true,
+    "window": true,
+    "localStorage": true,
+    "fetch": true,
+    "VERSION": true,
+    "google": true,
+    "ga": true,
+    "multiStorage": true, // This is already defined correctly
+    "jQuery": false,
+    "$": false,
+    "cy": false,
+    "Cypress": false,
+    "describe": false,
+    "context": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false,
+    "it": false,
+    "assert": false,
+    "expect": false
+  },
+  "plugins": ["react", "prettier", "cypress"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "always",
+        "endOfLine": "auto",
+        "printWidth": 120,
+        "semi": true,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "all"
+      }
+    ],
+    "no-console": "off",
+    "semi": ["error", "always"],
+    "eqeqeq": ["error", "always"],
+    "react/display-name": 0,
+    "prefer-template": 0,
+    "object-curly-spacing": ["error", "always"],
+    "react/require-default-props": 2,
+    "react/self-closing-comp": [
+      "warn",
+      {
+        "component": true,
+        "html": false
+      }
+    ],
+    "react/sort-comp": [
+      1,
+      {
+        "order": ["static-methods", "lifecycle", "everything-else", "rendering"],
+        "groups": {
+          "rendering": ["/^render.+$/", "render"]
+        }
+      }
+    ],
+    "jsx-a11y/href-no-hash": "off",
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".jsx", ".js"]
+      }
+    ],
+    "no-unsafe-optional-chaining": "off",
+    "react/no-find-dom-node": 1,
+    "import/prefer-default-export": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": 0
+  },
+  "settings": {
+    "react": {
+      "version": "18.2.0"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.stories.js"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
